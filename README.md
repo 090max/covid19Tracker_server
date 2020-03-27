@@ -88,7 +88,7 @@ python app.py
 
 2. Install heroku CLI .Follow this <a href="https://devcenter.heroku.com/articles/heroku-cli">link</a>.
 
-3. Run the following commands on your terminal in the directory of project.
+3. Run the following commands on your terminal in the directory of project.Note : The Procfile and requirements.txt is already defined here , so no need of making a new one.
 ```sh
 git init
 ```
