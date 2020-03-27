@@ -18,10 +18,11 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [Routes Information](#routes-information)
+* [API Information](#api-information)
+  * [Routes Information](#routes-information)
+  * [API Files Information](#api-files-information)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Contributing](#contributing)
 * [License](#license)
@@ -29,48 +30,71 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
+<!-- API Information -->
+## API Information
 ## Routes Information
 
 * /getgeneral : Returns a JSON data of the current cases report of India.
 * /getanalytics : Returns a JSON data of the past case report along with current cases in India .This is specifically for data visualization.
 * /getstate?state=<statename> :Return a JSON data of the current case report of a particular state.
 * /getstate?state=all :Return a JSON data of the current case report of all Indian states.
+  
+## API Files Information
+
+* app.py : Responsible for routing purpose.
+* information_fetcher.py : Fetches the information for a particular route.
+* scrapper.py :Scrapes the data from "https://www.mohfw.gov.in/"
+* clock.py :Runs the cron job in the given interval of time.
+  
 
 ### Built With
-* [ReactJS](https://reactjs.org/)
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [Python]
+* [Flask]
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Here is a quick installation guide.
-
-### Prerequisites
-
-* npm
-```sh
-npm install npm@latest -g
-```
+Here is a quick installation guide.Please note this is for Ubuntu machines.
 
 ### Installation
 
-To download it as a Personalize Web App , open the <a href="https://covid19indiatracker.netlify.com">Link</a> in Google Chrome and then "Add to home screen".To Run the application for development Do the following:
 1. To Run the application for development ,Clone the repo
 ```sh
-git clone https://github.com/090max/covid19IndiaTracker
+git clone https://github.com/090max/covid19Tracker_server
 ```
-2. Install NPM packages.
+2. Install requirements.
 ```sh
-npm i
+pip install requirements.txt
 ```
-4. Run the client.`
-```JS
-npm start
+3. Run the application.`
+```Py
+python app.py
 ```
 
+### Heroku Hosting
+
+1. Login to heroku and create a new web app. 
+
+2. Install heroku CLI .Follow this <a href="https://devcenter.heroku.com/articles/heroku-cli">link</a>.
+
+3. Run the following commands`
+```sh
+git int
+```
+```sh
+heroku git:remote -a <your heroku app name>
+```
+```sh
+git add .
+```
+```sh
+git commit -m "Commit info"
+```
+
+```sh
+git push heroku master
+```
 
 <!-- CONTRIBUTING -->
 ## Contributing
