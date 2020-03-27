@@ -24,6 +24,8 @@
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Installation](#installation)
+  * [Database Setup](#database-setup)
+  * [Heroku Hosting](#heroku-hosting)
 * [Contributing](#contributing)
 * [License](#license)
 
@@ -48,8 +50,9 @@
   
 
 ### Built With
-* [Python]
-* [Flask]
+* Python
+* Flask
+* Mongo DB
 
 
 <!-- GETTING STARTED -->
@@ -71,6 +74,13 @@ pip install requirements.txt
 ```Py
 python app.py
 ```
+### Database Setup
+
+1. Go to any of the Mongo DB hosting website( ex - Mongo Atlas)
+2. Create a Database named "covid19".
+3. Create two collections named "general" and "state_wise"
+4. Paste the connection url in db_helper.py file.
+
 
 ### Heroku Hosting
 
@@ -78,7 +88,7 @@ python app.py
 
 2. Install heroku CLI .Follow this <a href="https://devcenter.heroku.com/articles/heroku-cli">link</a>.
 
-3. Run the following commands`
+3. Run the following commands on your terminal in the directory of project.
 ```sh
 git int
 ```
@@ -95,6 +105,19 @@ git commit -m "Commit info"
 ```sh
 git push heroku master
 ```
+4. Run the following commands to scale the clock (cron job) and web app , run on your terminal.
+```sh
+heroku ps:scale clock =1
+```
+```sh
+heroku ps:scale web=1
+```
+5. Add time zone to the heroku application ,run this on terminal
+```sh
+heroku config:add TZ="Asia/Kolkata"
+```
+6. Thats is your application is LIVE !!.
+
 
 <!-- CONTRIBUTING -->
 ## Contributing
