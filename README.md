@@ -7,7 +7,7 @@
   <h3 align="center">Covid 19 Tracker</h3>
 
   <p align="center">
-   A pyhton flask API that regularly tracks Covid19 cases in India. 
+   A python flask API that regularly tracks Covid19 cases in India. 
     <br />
     <a href="http://covidtracker19.herokuapp.com/">View Demo</a>
   </p>
@@ -90,7 +90,7 @@ python app.py
 
 3. Run the following commands on your terminal in the directory of project.
 ```sh
-git int
+git init
 ```
 ```sh
 heroku git:remote -a <your heroku app name>
