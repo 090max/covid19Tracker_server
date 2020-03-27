@@ -3,16 +3,13 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/090max/ConnectU">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
   <h3 align="center">Covid 19 Tracker</h3>
 
   <p align="center">
-   A React Personalized Web App that tracks the Covid-19 cases in India. 
+   A pyhton flask API that regularly tracks Covid19 cases in India. 
     <br />
-    <a href="https://covid19indiatracker.netlify.com">View Demo</a>
+    <a href="http://covidtracker19.herokuapp.com/">View Demo</a>
   </p>
 </p>
 
@@ -21,7 +18,7 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [About the Project](#about-the-project)
+* [Routes Information](#routes-information)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
@@ -33,22 +30,12 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Routes Information
 
-![main_page](https://github.com/090max/covid19IndiaTracker/blob/master/images/main.png)
-![State Tracking](https://github.com/090max/covid19IndiaTracker/blob/master/images/state_fetcher.png)
-![All states Info](https://github.com/090max/covid19IndiaTracker/blob/master/images/states.png)
-![Visualization](https://github.com/090max/covid19IndiaTracker/blob/master/images/analytics.png)
-
-
-This is a a covid-19 tracker made specifically for India. 
-
-Features of the Chat Application:
-* Regularly updates the users about the Active cases , Migrated Cases , Death Cases and Discharged Cases.
-* Automatically fetches the user's location and displays the state wise report. 
-* Shows visualization of the Covid-19 reports in India so far.
-* The Server API(Implemented in Python Flask) regularly updates the data from "https://www.mohfw.gov.in/" in every 15 minutes interval.
-* Easy to install as this is a Personalized Web App.
+* /getgeneral : Returns a JSON data of the current cases report of India.
+* /getanalytics : Returns a JSON data of the past case report along with current cases in India .This is specifically for data visualization.
+* /getstate?state=<statename> :Return a JSON data of the current case report of a particular state.
+* /getstate?state=all :Return a JSON data of the current case report of all Indian states.
 
 ### Built With
 * [ReactJS](https://reactjs.org/)
